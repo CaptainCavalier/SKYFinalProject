@@ -18,16 +18,37 @@ def home():
 
 @app.route('/carmatch')
 def carmatch():
-    return render_template('carmatch.html', title="Matcher")
+    return render_template('carmatch.html', title="Match app")
 
 @app.route('/subscribe')
 def subscribe():
     return render_template('subscribe.html', title="Subscribe")
 
+
 @app.route('/showroom')
 def showroom():
     return render_template('showroom.html', title="Showroom")
 
+
+@app.route('/golfr')
+def golfr():
+    return render_template('golfr.html', title="Golf R")
+
+@app.route('/model3')
+def model3():
+    return render_template('model3.html', title="Model 3")
+
+@app.route('/rangerover')
+def rangerover():
+    return render_template('rangerover.html', title="Range Rover")
+
+@app.route('/rs3')
+def rs3():
+    return render_template('rs3.html', title="=RS3")
+
+@app.route('/rs6')
+def rs6():
+    return render_template('rs6.html', title="RS6")
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
