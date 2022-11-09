@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template
 
 from application import app
 
@@ -10,9 +10,13 @@ def home():
 
 
 @app.route('/carmatch')
-def carmnatch():
-    return render_template('carmatch.html', title="Car Match")
+def carmatch():
+    return render_template('carmatch.html', title="Matcher")
 
-# @app.route('/carmatch')
-# def carmnatch():
-#     return render_template('carmatch.html', title="Car Match")
+@app.route('/subscribe')
+def subscribe():
+    return render_template('subscribe.html', title="Subscribe")
+
+@app.route('/showroom')
+def showroom():
+    return render_template('showroom.html', title="Showroom")

@@ -2,35 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{title}} - page</title>
+    <title>{{title}} | CarMatch</title>
   <!-- bootstrap link here -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
+    <body>
 
 <div class ="topnav">
 <nav class="navbar">
     <form class="container-fluid justify-content-start">
       <a href="http://127.0.0.1:8000/"> <button id="homebutton" class="btn btn-outline-success me-2" type="button">Home</button></a>
-      <a href="http://127.0.0.1:8000/carmatch"> <button id="carmatch" class="btn btn-outline-success me-2" type="button">Car Match</button></a>
-      <a href="http://127.0.0.1:8000/"> <button id="EMPTY1" class="btn btn-outline-success me-2" type="button">EMPTY1</button></a>
-      <a href="http://127.0.0.1:8000/"> <button id="EMPTY2" class="btn btn-outline-success me-2" type="button">EMPTY2</button></a>
+      <a href="http://127.0.0.1:8000/carmatch"> <button id="carmatch" class="btn btn-outline-success me-2" type="button">Matcher</button></a>
+      <a href="http://127.0.0.1:8000/subscribe"> <button id="subscribe" class="btn btn-outline-success me-2" type="button">Subscribe</button></a>
+      <a href="http://127.0.0.1:8000/showroom"> <button id="showroom" class="btn btn-outline-success me-2" type="button">Showroom</button></a>
 
     </form>
   </nav>
 </div>
 
-<!--header-->
-<!--nav section-->
+<div class="margin">
+
 <h1>{{ title }}</h1>
+
+
+
 {% block body_content %}{% endblock %}
 <br><br><br><br><br><br>
 <br><br><br><br><br><br>
 <br><br><br><br><br><br>
 <br><br><br><br><br><br>
-<footer>Copyright commit.issues 2022</footer>
+    <footer>Copyright commit.issues 2022</footer></div>
 <!--footer-->
 <!--bootstrap java here-->
 
