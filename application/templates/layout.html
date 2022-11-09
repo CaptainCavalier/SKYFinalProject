@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}} - page</title>
+  <!-- bootstrap link here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class ="topnav">
+<nav class="navbar">
+    <form class="container-fluid justify-content-start">
+      <a href="http://127.0.0.1:8000/"> <button id="homebutton" class="btn btn-outline-success me-2" type="button">Home</button></a>
+      <a href="http://127.0.0.1:8000/"> <button id="carmatch" class="btn btn-outline-success me-2" type="button">Car Match</button></a>
+      <a href="http://127.0.0.1:8000/"> <button id="EMPTY1" class="btn btn-outline-success me-2" type="button">EMPTY1</button></a>
+      <a href="http://127.0.0.1:8000/"> <button id="EMPTY2" class="btn btn-outline-success me-2" type="button">EMPTY2</button></a>
+
+    </form>
+  </nav>
+</div>
+
+<!--header-->
+<!--nav section-->
+<h1>{{ title }}</h1>
+{% block body_content %}{% endblock %}
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<footer>Copyright commit.issues 2022</footer>
+<!--footer-->
+<!--bootstrap java here-->
+
+</body>
+</html>
