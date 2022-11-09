@@ -2,8 +2,6 @@ from application import app
 
 app.config['SECRET_KEY'] = 'YOUR_SECRET_KEY'
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
