@@ -1,12 +1,13 @@
 from flask import render_template, request
 
 from application import app
-# from application.forms import BasicForm
-#
-# # needed to connect to database
-# from application.data_library import DataLibrary
-# # instantiating an object of DataProviderService
-# DATA_PROVIDER = DataLibrary()
+
+from application.forms import BasicForm
+
+# needed to connect to database
+from application.data_library import DataLibrary
+# instantiating an object of DataProviderService
+DATA_PROVIDER = DataLibrary()
 
 
 

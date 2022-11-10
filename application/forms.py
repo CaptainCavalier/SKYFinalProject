@@ -1,14 +1,14 @@
-# from wtforms import StringField, SubmitField
-# from flask_wtf import FlaskForm
-#
-#
-#  # inheritance
-# # BasicForm inherits from FlaskForm
-# # BasicForm is now a kind of FlaskForm
-# class BasicForm(FlaskForm):
-#     # instantiating various input fields
-#     first_name = StringField('First Name')
-#     last_name = StringField('Last Name')
-#     age = StringField('Age')
-#     email = StringField('Email Address')
-#     submit = SubmitField('Create Membership')
+from wtforms import StringField, SubmitField
+from flask_wtf import FlaskForm
+
+
+ # inheritance
+# BasicForm inherits from FlaskForm
+# BasicForm is now a kind of FlaskForm
+class BasicForm(FlaskForm):
+    # instantiating various input fields
+    first_name = StringField('First Name')
+    last_name = StringField('Last Name')
+    age = StringField('Age')
+    email = StringField('Email Address')
+    submit = SubmitField('Create Membership')
