@@ -43,4 +43,3 @@ class DataLibrary:
             self.cursor.execute(sql, input_values)
             all_people = self.cursor.fetchone()
         return all_people
-
