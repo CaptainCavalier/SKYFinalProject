@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Hyundai Ioniq</h1>
+<br><br><br>
+<p>The future is here! The Ioniq is a fantastic choice. </p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/ioniq2.png') }}" />
+
+<br><br><br>
+
+<p>You've made a fantastic choice with Ioniq. If you'd like to purchase it, simply follow the below link
+        to purchase your very own ticket to the future.</p>
+
+<a href="https://www.hyundai.co.uk/new-cars/ioniq5"><button type="button" class="btn btn-secondary btn-lg">Purchase</button></a>
+
+
+
+{% endblock %}

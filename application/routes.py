@@ -35,6 +35,12 @@ def showroom():
 def golfr():
     return render_template('golfr.html', title="Golf R")
 
+
+@app.route('/purchase_golfr')
+def purchase_golfr():
+    return render_template('purchase_golfr.html', title="Match Complete")
+
+
 @app.route('/model3')
 def model3():
     return render_template('model3.html', title="Model 3")
@@ -67,9 +73,17 @@ def models():
 def inoiq():
     return render_template('ioniq.html', title="Ioniq")
 
+@app.route('/purchase_ioniq')
+def purchase_inoiq():
+    return render_template('purchase_ioniq.html', title="Match Complete")
+
 @app.route('/aygo')
 def aygo():
     return render_template('aygo.html', title="Aygo")
+
+@app.route('/purchase_aygo')
+def purchase_aygo():
+    return render_template('purchase_aygo.html', title="Match complete")
 
 @app.route('/sandero')
 def sandero():

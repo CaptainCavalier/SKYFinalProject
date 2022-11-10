@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Golf R</h1>
+<br><br><br>
+<p>A Golf R, the car that's everything to everyone. Great choice. </p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/golfr2.png') }}" />
+
+<br><br><br>
+
+<p>You've made a fantastic choice with the versatile and powerful Golf R. If you'd like to purchase it, simply follow the below link
+        to purchase your very own Golf R</p>
+
+<a href="https://www.volkswagen.co.uk/en/new/golf-r.html"><button type="button" class="btn btn-secondary btn-lg">Purchase</button></a>
+
+
+
+{% endblock %}

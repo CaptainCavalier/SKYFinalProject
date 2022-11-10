@@ -1,12 +1,18 @@
 {% extends "layout.html" %}
 {% block body_content %}
-    <p>Welcome to Car Matching Tool</p>
-    <p> Use a single key word to find your next car</p>
+    <h1>CarMatch-lite</h1>
+    <br><br>
+    <p> Not got time for the full fat CarMatch app? Simply type a keyword that interests you such as "fast" or "speedy"
+    and let us do the rest using the streamlined CarMatch-lite tool. </p>
+
         <div class='form'>
             <form method='POST' action=''>
                 {{ form.hidden_tag() }}
-                {{ form.car_type.label }} {{ form.car_type }}
-                <br>
+                <br><br>
+                {{ form.car_type.label }}
+                <br><br>
+                {{ form.car_type }}
+                <br><br>
                 {{ form.submit }}
                 <br>
             {{ rec }}
