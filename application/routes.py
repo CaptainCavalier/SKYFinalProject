@@ -104,7 +104,9 @@ def sandero():
 def maestro():
     return render_template('maestro.html', title="Maestro")
 
-
+@app.route('/tc')
+def tc():
+    return render_template('tc.html', title="T's and C's")
 @app.route('/members', methods=['GET', 'POST'])
 def register():
     error = ""
