@@ -49,7 +49,7 @@ def register():
             success = 'Member with ID: ' + str(new_person_id) + ' was created. Thank you!'
             return render_template('success.html', success_message=success)
 
-    return render_template('person.html', form=form, message=error)
+    return render_template('members.html', form=form, message=error)
 
 @app.route('/people', methods=['GET'])
 def get_people():
