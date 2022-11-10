@@ -2,7 +2,7 @@ from flask import render_template, request
 
 from application import app
 
-from application.forms import BasicForm
+from application.forms import BasicForm, VehicleForm
 
 # needed to connect to database
 from application.data_library import DataLibrary
@@ -107,3 +107,47 @@ def get_people():
     return render_template('people.html', title="People", people=all_people)
 
 
+
+@app.route('/car_pick', methods=['GET', 'POST'])
+def car_pick():
+    form = VehicleForm()
+    if request.method == 'POST':
+        car_type = form.car_type.data
+        sports = ("quick", "fast", "speedy", "rapid", "sports")
+        family = ("family", "kids")
+        economical = ("economical", "cheap", "efficient")
+        estate = ("pets", "luggage")
+        hybrid = ("green", "environment", "electric")
+        suv = ("suv", "people carrier", "sports utility vehicle", "chelsea tractor")
+        convertible = ("convertible", "soft top")
+
+        sportscar = "Ferrari"
+        familycar = "Fiat"
+        economicalcar = "Seat"
+        estatecar = "BMW"
+        hybridcar = "Tesla"
+        suvcar = "Hummer"
+        convertiblecar = "Corvette"
+
+        if car_type in list(sports):
+            recommendation = f" We think you would like a : {sportscar} or a {convertiblecar} "
+        elif car_type in list(family):
+            recommendation = f" We think you would like a : {familycar}, {estatecar} or {suvcar} "
+        elif car_type in list(economical):
+            recommendation = f" We think you would like a : {economicalcar} or {hybridcar} "
+        elif car_type in list(estate):
+            recommendation = f" We think you would like a : {estatecar}"
+        elif car_type in list(hybrid):
+            recommendation = f" We think you would like a : {hybridcar}"
+        elif car_type in list(suv):
+            recommendation = f" We think you would like a : {suvcar}"
+        elif car_type in list(convertible):
+            recommendation = f" We think you would like a : {convertiblecar}"
+        else:
+            recommendation = f" Try a different key word"
+        return render_template('car_loop.html', form=form, rec=recommendation)
+    return render_template('car_loop.html', form=form)
+
+@app.route('/car_loop', methods=['GET'])
+def car_loop():
+    return render_template('car_loop.html', title="car_loop")

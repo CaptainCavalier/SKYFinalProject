@@ -12,3 +12,7 @@ class BasicForm(FlaskForm):
     age = StringField('Age')
     email = StringField('Email Address')
     submit = SubmitField('Create Membership')
+
+class VehicleForm(FlaskForm):
+    car_type = StringField('What type of car are you looking for?')
+    submit = SubmitField('Find me a car')

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body_content %}
+    <p>Welcome to Car Matching Tool</p>
+    <p> Use a single key word to find your next car</p>
+        <div class='form'>
+            <form method='POST' action=''>
+                {{ form.hidden_tag() }}
+                {{ form.car_type.label }} {{ form.car_type }}
+                <br>
+                {{ form.submit }}
+                <br>
+            {{ rec }}
+            </form>
+        </div>
+{% endblock %}
