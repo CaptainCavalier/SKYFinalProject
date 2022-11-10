@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Toyota Aygo</h1>
+<br><br><br>
+<p>We think your perfect match is the Aygo. If you want to fine tune, use the buttons below. </p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/aygo.png') }}" />
+
+<br><br><br>
+
+<p>The current Toyota Aygo isn’t all that mechanically different from its predecessor, but its looks are refreshingly contemporary with a youthful slant.
+        There’s not much power or dynamic capability, and while improvements
+        to the sound-deadening make this a more refined car to be in at speed,
+        it’s still some way short of the city car class leaders for motorway driving.
+        Practicality also suffers thanks to the Aygo’s super-compact dimensions.
+        Yet the latest Aygo maintains the same sense of fun as before, and there are small but
+        worthwhile technical improvements under the skin, including some significant advances in
+        vehicle safety. Plus it’s super frugal, easy to personalise, and well-connected with Toyota’s
+        latest x-touch multimedia system. So it may only earn three stars from us, but if you like it -
+        you’ll love it! </p>
+
+<a href="http://127.0.0.1:8000/sandero"><button type="button" class="btn btn-secondary btn-lg">Cheaper please</button></a>
+<a href="http://127.0.0.1:8000/ioniq"><button type="button" class="btn btn-secondary btn-lg">More electricity please</button></a>
+<button type="button" class="btn btn-secondary btn-lg">Perfect, confirm my selection</button>
+
+
+
+
+{% endblock %}

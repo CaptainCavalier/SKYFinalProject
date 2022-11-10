@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Rivian</h1>
+<br><br><br>
+<p>We think your perfect match is the Rivian R1S. If you want to fine tune, use the buttons below. </p>
+
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/rivian.png') }}" />
+
+<br><br><br>
+<p>From the hottest places to the coldest — from 130ºF to -25ºF — our battery systems were built to explore,
+    delivering between 260 – 320+ miles of range depending on the battery pack and motor that you select.
+    The Dual-Motor and 21" wheel combination is the most efficient, with the 20” and 22” wheels having a range
+    reduction of \
+    10-15% and 5-10% respectively. Estimates will vary depending on driving style and conditions.
+    Drive through 3+ feet of water. Rock crawl at a 100% grade.
+    Traverse just about any terrain with 14.9 inches of ground clearance.
+    Tow up to 7,700 lbs. With a 0-60 mph time as quick as 3 seconds,
+    depending on your configuration, it also delivers the on-road handling of a sports car
+</p>
+
+
+<a href="http://127.0.0.1:8000/carmatch"><button type="button" class="btn btn-secondary btn-lg">Did we get it wrong? Start again.</button></a>
+<button type="button" class="btn btn-secondary btn-lg">Perfect, confirm my selection</button>
+
+
+
+
+{% endblock %}

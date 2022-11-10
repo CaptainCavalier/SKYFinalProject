@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Hyundai Ioniq</h1>
+<br><br><br>
+<p>We think your perfect match is the Ioniq. If you want to fine tune, use the buttons below. </p>
+
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/ioniq.png') }}" />
+
+<br><br><br>
+<p>Model S platforms unite powertrain and battery technologies for unrivaled performance, range and efficiency.
+    New module and pack thermal architecture allows faster charging and
+    gives you more power and endurance in all conditions.With a drag coefficient of just .208 Cd, the lowest on the planet, Model S is built for speed, endurance and range. Improved aerodynamics and a wider
+    chassis offer more responsive performance so you can take corners quicker and with more confidence.</p>
+
+<a href="http://127.0.0.1:8000/carmatch"><button type="button" class="btn btn-secondary btn-lg">Did we get it wrong? Start again.</button></a>
+<button type="button" class="btn btn-secondary btn-lg">Perfect, confirm my selection</button>
+
+
+
+
+{% endblock %}

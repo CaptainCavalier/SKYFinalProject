@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Dacia Sandero</h1>
+<br><br><br>
+<p>We think your perfect match is the Sandero. If you want to fine tune, use the buttons below. </p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/sandero.png') }}" />
+
+<br><br><br>
+
+<p> Dacia claims its focus is making quality new cars at an affordable price. Well, it’s job done with the latest Sandero. The supermini maintains its position as being the UK’s cheapest car to buy, with key upgrades only adding to its appeal with cost-conscious buyers.
+
+The Sandero continues to offer great practicality, while the model’s celebrated low running costs aren’t overly affected by opting for a higher-spec version. They say the most simple ideas are often the best, and Dacia’s well-judged, value-for-money family hatchback is right up there.
+
+</p>
+
+<a href="http://127.0.0.1:8000/maestro"><button type="button" class="btn btn-secondary btn-lg">Even cheaper please</button></a>
+<button type="button" class="btn btn-secondary btn-lg">Perfect, confirm my selection</button>
+
+
+
+
+{% endblock %}

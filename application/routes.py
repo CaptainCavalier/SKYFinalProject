@@ -51,7 +51,35 @@ def rs3():
 def rs6():
     return render_template('rs6.html', title="RS6")
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/rangeroversport')
+def rangeroversport():
+    return render_template('rangeroversport.html', title="Range Rover Sport")
+
+@app.route('/rivian')
+def rivian():
+    return render_template('rivian.html', title="Rivian R1S")
+
+@app.route('/models')
+def models():
+    return render_template('models.html', title="Model S")
+
+@app.route('/ioniq')
+def inoiq():
+    return render_template('ioniq.html', title="Ioniq")
+
+@app.route('/aygo')
+def aygo():
+    return render_template('aygo.html', title="Aygo")
+
+@app.route('/sandero')
+def sandero():
+    return render_template('sandero.html', title="Sandero")
+
+@app.route('/maestro')
+def maestro():
+    return render_template('maestro.html', title="Maestro")
+
+@app.route('/members', methods=['GET', 'POST'])
 def register():
     error = ""
     # instantiating an object of type BasicForm

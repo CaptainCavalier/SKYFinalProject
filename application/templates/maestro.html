@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Austin Maestro</h1>
+<br><br><br>
+<p>We think your perfect match is the Maestro. If you want to fine tune, use the buttons below. </p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/maestro.png') }}" />
+
+<br><br><br>
+
+<p>The Maestro incorporated many novel and pioneering features for its class. It had a bonded laminated windscreen, homofocal headlamps, body-coloured plastic bumpers, an electronic engine management system, adjustable front seat belt upper anchorage positions, an asymmetrically split rear seat, and a 12,000-mile (19,300 km) service interval.
+        The MG and Vanden Plas versions had solid-state instrumentation with digital
+        speedometer and vacuum fluorescent analogue displays for tachometer,
+        fuel and temperature gauges, trip computer and a voice synthesis warning and information system.
+        The analogue instrument pod fitted to lower models was later used in the Range Rover from 1985 onwards.
+     </p>
+
+
+<a href="http://127.0.0.1:8000/carmatch"><button type="button" class="btn btn-secondary btn-lg">Did we get it wrong? Start again.</button></a>
+<button type="button" class="btn btn-secondary btn-lg">Perfect, confirm my selection</button>
+
+
+
+
+{% endblock %}
