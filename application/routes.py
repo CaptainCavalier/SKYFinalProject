@@ -149,35 +149,20 @@ def car_pick():
         suv = ("suv", "people carrier", "sports utility vehicle", "chelsea tractor")
         convertible = ("convertible", "soft top")
 
-        sportscar = "{{ url_for('static', filename='images/rs3.png') }}"
-        familycar = "Fiat"
-        economicalcar = "Seat"
-        estatecar = "BMW"
-        hybridcar = "Tesla"
-        suvcar = "Hummer"
-        convertiblecar = "Corvette"
-
         if car_type in list(sports):
             return render_template('rs3.html', title="=RS3")
-            # recommendation = f" We think you would like a : {sportscar} or a {convertiblecar} "
         elif car_type in list(family):
             return render_template('sandero.html', title="Sandero")
-             # recommendation = f" We think you would like a : {familycar}, {estatecar} or {suvcar} "
         elif car_type in list(economical):
             return render_template('aygo.html', title="Aygo")
-            # recommendation = f" We think you would like a : {economicalcar} or {hybridcar} "
         elif car_type in list(estate):
             return render_template('rs6.html', title="RS6")
-            # recommendation = f" We think you would like a : {estatecar}"
         elif car_type in list(hybrid):
             return render_template('model3.html', title="Model 3")
-            # recommendation = f" We think you would like a : {hybridcar}"
         elif car_type in list(suv):
             return render_template('rivian.html', title="Rivian R1S")
-            # recommendation = f" We think you would like a : {suvcar}"
         elif car_type in list(convertible):
             return render_template('maestro.html', title="Maestro")
-            # recommendation = f" We think you would like a : {convertiblecar}"
         else:
             recommendation = f" Try a different key word"
         return render_template('car_loop.html', form=form, rec=recommendation)
