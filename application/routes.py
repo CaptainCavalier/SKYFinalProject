@@ -149,7 +149,7 @@ def car_pick():
         suv = ("suv", "people carrier", "sports utility vehicle", "chelsea tractor")
         convertible = ("convertible", "soft top")
 
-        sportscar = "Ferrari"
+        sportscar = "{{ url_for('static', filename='images/rs3.png') }}"
         familycar = "Fiat"
         economicalcar = "Seat"
         estatecar = "BMW"
@@ -158,19 +158,26 @@ def car_pick():
         convertiblecar = "Corvette"
 
         if car_type in list(sports):
-            recommendation = f" We think you would like a : {sportscar} or a {convertiblecar} "
+            return render_template('rs3.html', title="=RS3")
+            # recommendation = f" We think you would like a : {sportscar} or a {convertiblecar} "
         elif car_type in list(family):
-            recommendation = f" We think you would like a : {familycar}, {estatecar} or {suvcar} "
+            return render_template('sandero.html', title="Sandero")
+             # recommendation = f" We think you would like a : {familycar}, {estatecar} or {suvcar} "
         elif car_type in list(economical):
-            recommendation = f" We think you would like a : {economicalcar} or {hybridcar} "
+            return render_template('aygo.html', title="Aygo")
+            # recommendation = f" We think you would like a : {economicalcar} or {hybridcar} "
         elif car_type in list(estate):
-            recommendation = f" We think you would like a : {estatecar}"
+            return render_template('rs6.html', title="RS6")
+            # recommendation = f" We think you would like a : {estatecar}"
         elif car_type in list(hybrid):
-            recommendation = f" We think you would like a : {hybridcar}"
+            return render_template('model3.html', title="Model 3")
+            # recommendation = f" We think you would like a : {hybridcar}"
         elif car_type in list(suv):
-            recommendation = f" We think you would like a : {suvcar}"
+            return render_template('rivian.html', title="Rivian R1S")
+            # recommendation = f" We think you would like a : {suvcar}"
         elif car_type in list(convertible):
-            recommendation = f" We think you would like a : {convertiblecar}"
+            return render_template('maestro.html', title="Maestro")
+            # recommendation = f" We think you would like a : {convertiblecar}"
         else:
             recommendation = f" Try a different key word"
         return render_template('car_loop.html', form=form, rec=recommendation)
