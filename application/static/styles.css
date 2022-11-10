@@ -1,0 +1,45 @@
+body {
+
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(120, 123, 121));
+    background-size: 500px;
+    color:black;
+    font-family: 'Courier New', Courier, monospace; color: azure;
+
+}
+
+nav {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+
+}
+
+
+.topnav
+.btn-outline-success {
+    --bs-btn-color: #000000;
+    --bs-btn-border-color: #868686;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #7c7c7c;
+    --bs-btn-hover-border-color: #000000;
+    --bs-btn-focus-shadow-rgb: 25,135,84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ffffff;
+    --bs-btn-active-border-color: #6a6a6a;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #871919;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #871919;
+    --bs-gradient: none;
+    font-size: x-large;
+}
+
+.margin {
+
+margin: 2rem;
+
+}
+
+.carmatchlogo {
+font-family: Caveat;
+
+
+}
