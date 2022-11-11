@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Dacia Sandero</h1>
+<br><br><br>
+<p>The Dacia Sandero. Great value for money. </p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/sandero2.png') }}" />
+
+<br><br><br>
+
+<p>You've made a fantastic choice with this Sandero. If you'd like to purchase it, simply follow the below link
+        to purchase.</p>
+
+<a href="https://www.google.com/search?q=dacia+sandero&rlz=1C5GCEM_en&oq=sdacia+sandeo&aqs
+=chrome.1.69i57j0i13i433i512j0i13i512l8.4795j1j7&sourceid=chrome&ie=UTF-8"><button type="button" class="btn btn-secondary btn-lg">Purchase</button></a>
+
+
+
+{% endblock %}

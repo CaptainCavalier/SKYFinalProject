@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Range Rover</h1>
+<br><br><br>
+<p>Off road luxury on four wheels. </p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/rangerover2.png') }}" />
+
+<br><br><br>
+
+<p>You've made a fantastic choice with this Range Rover. If you'd like to purchase it, simply follow the below link
+        to purchase off road heaven.</p>
+
+<a href="https://www.landrover.co.uk/vehicles/new-range-rover/index.html"><button type="button" class="btn btn-secondary btn-lg">Purchase</button></a>
+
+
+
+{% endblock %}

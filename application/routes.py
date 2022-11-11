@@ -109,9 +109,41 @@ def maestro():
 def purchase_maestro():
     return render_template('purchase_maestro.html', title="Match Complete")
 
+@app.route('/purchase_models')
+def purchase_models():
+    return render_template('purchase_models.html', title="Match Complete")
+
+
+@app.route('/purchase_rangerover')
+def purchase_rangerover():
+    return render_template('purchase_rangerover.html', title="Match Complete")
+
+@app.route('/purchase_rangeroversport')
+def purchase_rangeroversport():
+    return render_template('purchase_rangeroversport.html', title="Match Complete")
+
 @app.route('/purchase_model3')
 def purchase_model3():
     return render_template('purchase_model3.html', title="Match Complete")
+
+@app.route('/purchase_rs3')
+def purchase_rs3():
+    return render_template('purchase_rs3.html', title="Match Complete")
+
+@app.route('/purchase_rs6')
+def purchase_rs6():
+    return render_template('purchase_rs6.html', title="Match Complete")
+
+@app.route('/purchase_sandero')
+def purchase_sandero():
+    return render_template('purchase_sandero.html', title="Match Complete")
+
+@app.route('/purchase_rivian')
+def purchase_rivian():
+    return render_template('purchase_rivian.html', title="Match Complete")
+
+
+
 
 @app.route('/tc')
 def tc():

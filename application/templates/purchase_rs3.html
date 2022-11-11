@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Audi RS3</h1>
+<br><br><br>
+<p>Just like the S3, only a lot quicker!</p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/rs32.png') }}" />
+
+<br><br><br>
+
+<p>You've made a fantastic choice with this RS3. If you'd like to purchase it, simply follow the below link
+        to purchase one of the fastest hot-hatches money can buy.</p>
+
+<a href="https://www.audi.co.uk/uk/web/en.html"><button type="button" class="btn btn-secondary btn-lg">Purchase</button></a>
+
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Rivian R1S</h1>
+<br><br><br>
+<p>The brand-new Rivian R1S really is a sight to behold!</p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/rivian2.png') }}" />
+
+<br><br><br>
+
+<p>You've made a fantastic choice with this Rivian. If you'd like to purchase it, simply follow the below link
+        to purchase the fastest electric off-road vehicle money can buy.</p>
+
+<a href="https://rivian.com/r1s"><button type="button" class="btn btn-secondary btn-lg">Purchase</button></a>
+
+
+
+{% endblock %}
