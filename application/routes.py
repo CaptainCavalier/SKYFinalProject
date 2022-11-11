@@ -162,7 +162,7 @@ def car_pick():
         estate = ("pets", "luggage", "astonishing", "estate" "Pets", "Luggage", "Astonishing", "Estate")
         hybrid = ("green", "environment", "environmental", "electric", "Green", "Environment", "Environmental", "Electric")
         suv = ("suv", "people carrier", "sports utility vehicle", "chelsea tractor", "SUV", "People Carrier", "Sports Utility Vehicle", "Chelsea Tractor")
-        four = ("elegant", "powerful", "luxury", "sleek", "Elegant", "Powerful", "Luxary", "Sleek")
+        four = ("elegant", "powerful", "luxury", "sleek", "Elegant", "Powerful", "Luxury", "Sleek")
         vintage = ("vintage", "used", "experienced", "Vintage", "Used", "Experienced")
         innovative = ("innovative", "futuristic", "future", "Innovative", "Futuristic", "Future")
         hatch = ("hot hatch", "hatchback", "agile", "custom", "Hot Hatch", "Hatchback", "Agile")
