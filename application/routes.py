@@ -141,13 +141,16 @@ def car_pick():
     form = VehicleForm()
     if request.method == 'POST':
         car_type = form.car_type.data
-        sports = ("quick", "fast", "speedy", "rapid", "sports")
-        family = ("family", "kids")
+        sports = ("quick", "fast", "speedy", "rapid", "sports", "tuned")
+        family = ("family", "kids", "distinctive")
         economical = ("economical", "cheap", "efficient")
-        estate = ("pets", "luggage")
-        hybrid = ("green", "environment", "electric")
-        suv = ("suv", "people carrier", "sports utility vehicle", "chelsea tractor")
-        convertible = ("convertible", "soft top")
+        estate = ("pets", "luggage", "astonishing")
+        hybrid = ("green", "environment", "environmental", "electric")
+        suv = ("suv", "people carrier", "sports utility vehicle", "chelsea tractor", "effective")
+        four = ("elegant", "powerful", "luxury", "sleek")
+        vintage = ("vintage", "used", "experienced")
+        innovative = ("innovative", "futuristic", "future")
+        hatch = ("hot hatch", "hatchback", "agile", "custom")
 
         if car_type in list(sports):
             return render_template('rs3.html', title="=RS3")
@@ -161,8 +164,14 @@ def car_pick():
             return render_template('model3.html', title="Model 3")
         elif car_type in list(suv):
             return render_template('rivian.html', title="Rivian R1S")
-        elif car_type in list(convertible):
+        elif car_type in list(four):
+            return render_template('rangerover.html', title="Range Rover")
+        elif car_type in list(vintage):
             return render_template('maestro.html', title="Maestro")
+        elif car_type in list(innovative):
+            return render_template('purchase_ioniq.html', title="Match Complete")
+        elif car_type in list(hatch):
+            return render_template('golfr.html', title="Golf R")
         else:
             recommendation = f" Try a different key word"
         return render_template('car_loop.html', form=form, rec=recommendation)
