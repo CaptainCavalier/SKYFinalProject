@@ -145,9 +145,10 @@ def car_pick():
         family = ("family", "kids")
         economical = ("economical", "cheap", "efficient")
         estate = ("pets", "luggage")
-        hybrid = ("green", "environment", "electric")
+        hybrid = ("green", "environment", "environmental", "electric")
         suv = ("suv", "people carrier", "sports utility vehicle", "chelsea tractor")
-        convertible = ("convertible", "soft top")
+        four = ("elegant", "powerful", "luxury", )
+        vintage = ("vintage",)
 
         if car_type in list(sports):
             return render_template('rs3.html', title="=RS3")
@@ -161,7 +162,9 @@ def car_pick():
             return render_template('model3.html', title="Model 3")
         elif car_type in list(suv):
             return render_template('rivian.html', title="Rivian R1S")
-        elif car_type in list(convertible):
+        elif car_type in list(four):
+            return render_template('rangerover.html', title="Range Rover")
+        elif car_type in list(vintage):
             return render_template('maestro.html', title="Maestro")
         else:
             recommendation = f" Try a different key word"
