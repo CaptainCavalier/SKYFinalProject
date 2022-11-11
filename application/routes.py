@@ -104,6 +104,14 @@ def sandero():
 def maestro():
     return render_template('maestro.html', title="Maestro")
 
+@app.route('/purchase_maestro')
+def purchase_maestro():
+    return render_template('purchase_maestro.html', title="Match Complete")
+
+@app.route('/purchase_model3')
+def purchase_model3():
+    return render_template('purchase_model3.html', title="Match Complete")
+
 @app.route('/tc')
 def tc():
     return render_template('tc.html', title="T's and C's")

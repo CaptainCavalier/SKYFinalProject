@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<div class="row">
+        <div class="col-sm-4">
+        </div>
+
+<h1>Tesla Model 3</h1>
+<br><br><br>
+<p>Great all round EV. This is our pick of the bunch as far as EV's are concerned! </p>
+
+
+</div>
+<br><br>
+
+<img src="{{ url_for('static', filename='images/model32.png') }}" />
+
+<br><br><br>
+
+<p>You've made a fantastic choice with the Model 3. If you'd like to purchase it, simply follow the below link
+        to purchase your very slice of EV perfection.</p>
+
+<a href="https://www.tesla.com/en_gb/model3"><button type="button" class="btn btn-secondary btn-lg">Purchase</button></a>
+
+
+
+{% endblock %}
