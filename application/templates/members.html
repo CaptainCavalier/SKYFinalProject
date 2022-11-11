@@ -22,6 +22,8 @@
         <div class='form'>
             <form method='POST' action=''>
                 {{ form.hidden_tag() }}
+                {{ form.user_name.label }}<div class="col-sm-1"></div> {{form.user_name }}
+                <br><br>
                 {{ form.first_name.label }}<div class="col-sm-1"></div> {{ form.first_name }}
                 <br><br>
                 {{ form.last_name.label }}<div class="col-sm-1"></div> {{ form.last_name }}

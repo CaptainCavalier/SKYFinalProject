@@ -15,9 +15,9 @@ class DataLibrary:
         self.conn = pymysql.connect(host=host, port=port, user=user, password=password, db=database)
         self.cursor = self.conn.cursor()
 
-    def add_person(self, firstname, lastname, age, email):
-        sql = """insert into members (firstname, lastname, age, email) values (%s, %s, %s, %s)"""
-        input_values = (firstname, lastname, age, email)
+    def add_person(self, firstname, lastname, age, email, username):
+        sql = """insert into members (firstname, lastname, age, email, user_name) values (%s, %s, %s, %s, %s)"""
+        input_values = (firstname, lastname, age, email, username)
         try:
             self.cursor.execute(sql, input_values)
             self.conn.commit()
@@ -30,6 +30,13 @@ class DataLibrary:
         self.cursor.execute(sql_new_person_id)
         new_person = self.cursor.fetchone()
         return new_person[0]
+
+    def check_user(self, username):
+        sql_user_name = """select User_name from members where User_name = %s """
+        input_values = (username,)
+        number_of_users =  self.cursor.execute(sql_user_name, input_values)
+        return number_of_users
+
 
     def get_people(self, person_id=None, limit=None):
         all_people = []

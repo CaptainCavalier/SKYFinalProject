@@ -1,3 +1,4 @@
+import pymysql
 from flask import render_template, request
 
 from application import app
@@ -115,6 +116,8 @@ def purchase_model3():
 @app.route('/tc')
 def tc():
     return render_template('tc.html', title="T's and C's")
+
+
 @app.route('/members', methods=['GET', 'POST'])
 def register():
     error = ""
@@ -126,11 +129,15 @@ def register():
         last_name = form.last_name.data
         age = form.age.data
         email = form.email.data
+        user_name = form.user_name.data
 
-        if len(first_name) == 0 or len(last_name) == 0 or len(age) == 0 or len(email) == 0:
+        user_count = DATA_PROVIDER.check_user(user_name)
+        if user_count > 0:
+            error = "Username already taken, Please Choose Another"
+        elif len(first_name) == 0 or len(last_name) == 0 or len(age) == 0 or len(email) == 0 or len(user_name) == 0:
             error = "Please fill all fields"
         else:
-            new_person_id = DATA_PROVIDER.add_person(first_name, last_name, age, email)
+            new_person_id = DATA_PROVIDER.add_person(first_name, last_name, age, email, user_name)
 
             success = 'Member with ID: ' + str(new_person_id) + ' was created. Thank you!'
             return render_template('success.html', success_message=success)
