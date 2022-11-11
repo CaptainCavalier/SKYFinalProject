@@ -149,36 +149,36 @@ def car_pick():
     form = VehicleForm()
     if request.method == 'POST':
         car_type = form.car_type.data
-        sports = ("quick", "fast", "speedy", "rapid", "sports", "tuned")
-        family = ("family", "kids", "distinctive")
-        economical = ("economical", "cheap", "efficient")
-        estate = ("pets", "luggage", "astonishing")
-        hybrid = ("green", "environment", "environmental", "electric")
-        suv = ("suv", "people carrier", "sports utility vehicle", "chelsea tractor", "effective")
-        four = ("elegant", "powerful", "luxury", "sleek")
-        vintage = ("vintage", "used", "experienced")
-        innovative = ("innovative", "futuristic", "future")
-        hatch = ("hot hatch", "hatchback", "agile", "custom")
+        sports = ("quick", "fast", "speedy", "rapid", "sports", "Quick", "Fast", "Speedy", "Rapid", "Sports")
+        family = ("family", "kids", "distinctive", "Family", "Kids", "Distinctive")
+        economical = ("economical", "cheap", "efficient", "Economical", "Cheap", "Efficient")
+        estate = ("pets", "luggage", "astonishing", "estate" "Pets", "Luggage", "Astonishing", "Estate")
+        hybrid = ("green", "environment", "environmental", "electric", "Green", "Environment", "Environmental", "Electric")
+        suv = ("suv", "people carrier", "sports utility vehicle", "chelsea tractor", "SUV", "People Carrier", "Sports Utility Vehicle", "Chelsea Tractor")
+        four = ("elegant", "powerful", "luxury", "sleek", "Elegant", "Powerful", "Luxary", "Sleek")
+        vintage = ("vintage", "used", "experienced", "Vintage", "Used", "Experienced")
+        innovative = ("innovative", "futuristic", "future", "Innovative", "Futuristic", "Future")
+        hatch = ("hot hatch", "hatchback", "agile", "custom", "Hot Hatch", "Hatchback", "Agile")
 
-        if car_type in list(sports):
+        if car_type in sports:
             return render_template('rs3.html', title="=RS3")
-        elif car_type in list(family):
+        elif car_type in family:
             return render_template('sandero.html', title="Sandero")
-        elif car_type in list(economical):
+        elif car_type in economical:
             return render_template('aygo.html', title="Aygo")
-        elif car_type in list(estate):
+        elif car_type in estate:
             return render_template('rs6.html', title="RS6")
-        elif car_type in list(hybrid):
+        elif car_type in hybrid:
             return render_template('model3.html', title="Model 3")
-        elif car_type in list(suv):
+        elif car_type in suv:
             return render_template('rivian.html', title="Rivian R1S")
-        elif car_type in list(four):
+        elif car_type in four:
             return render_template('rangerover.html', title="Range Rover")
-        elif car_type in list(vintage):
+        elif car_type in vintage:
             return render_template('maestro.html', title="Maestro")
-        elif car_type in list(innovative):
+        elif car_type in innovative:
             return render_template('purchase_ioniq.html', title="Match Complete")
-        elif car_type in list(hatch):
+        elif car_type in hatch:
             return render_template('golfr.html', title="Golf R")
         else:
             recommendation = f" Try a different key word"
